@@ -1,0 +1,23 @@
+Copyright © 2025 Suryansh Sharma
+
+All rights reserved.
+
+This software and associated documentation files (the “Software”) are the intellectual property of Suryansh Sharma and are provided solely for academic, educational, and personal portfolio purposes.
+
+Permission is hereby granted to view, use, and demonstrate the Software for:
+- Personal education
+- Technical interviews or job applications
+- Academic evaluation
+
+You are NOT permitted to:
+- Use the Software or any part of it for commercial purposes
+- Sell, license, distribute, or host derivative works
+- Claim ownership or remove attribution from this Software
+- Disclose proprietary logic in public codebases without written consent
+
+For commercial use, integration, or licensing requests, contact:
+📧 sharmasuryansh2004@gmail.com
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+Violations may result in legal action and/or takedown requests under Indian and international IP law.
