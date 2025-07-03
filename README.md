@@ -43,23 +43,12 @@ It consumes logs (via Kafka + Filebeat), parses them using configurable detectio
 ✅ Environment-based secret handling (`.env`)  
 
 ---
-
-## 📸 Screenshots
-
-| Alert Example | Telegram Bot |
-|--------------|--------------|
-| ![Alert](https://i.imgur.com/your_alert.png) | ![Bot](https://i.imgur.com/your_bot.png) |
-
-> _(Replace these with real screenshots after pushing the repo)_
-
----
-
 ## 🛠️ Local Setup
 
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/yourusername/AutoResponder.git
+git clone https://github.com/Suryansh-7s/AutoResponder.git
 cd AutoResponder
 ```
 
@@ -67,8 +56,7 @@ cd AutoResponder
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-
+./venv/bin/Activate.ps1
 pip install -r requirements.txt
 ```
 
@@ -89,6 +77,7 @@ KAFKA_BOOTSTRAP_SERVERS=localhost:9092
 
 ```bash
 sudo systemctl start filebeat
+sudo systemctl status filebeat
 ```
 
 ### In Python (Windows or WSL)
@@ -115,11 +104,11 @@ Check `/var/log/auth.log` to confirm entries are generated.
 
 ```
 AutoResponder/
-├── alert/                # Telegram alert module
-├── redis_cache/          # Redis + AbuseIPDB logic
-├── rules/                # Rule definitions (regex-based)
-├── stream/               # Kafka consumer logic
-├── .env                  # Secret keys (ignored by Git)
+├── alert/                
+├── redis_cache/
+├── stream/
+├── .env (To be created by the user)
+├── rules.json
 ├── requirements.txt
 └── README.md
 ```
@@ -138,12 +127,3 @@ AutoResponder/
 ## 🤝 Contributing
 
 Feel free to fork, raise PRs, or suggest new log types to monitor!
-
----
-
-## 📝 License
-
-**Copyright © 2025 Suryansh Sharma**
-
-This repository is private for educational & portfolio purposes.  
-For commercial use or derivative works, please contact the author.
