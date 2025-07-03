@@ -1,0 +1,23 @@
+[
+    {
+      "type": "invalid_user",
+      "pattern": "invalid user",
+      "label": "👻 Invalid User Access Attempt"
+    },
+    {
+      "type": "brute_force",
+      "pattern": "failed password",
+      "label": "🚨 Brute Force Attempt Detected"
+    },
+    {
+      "type": "firewall_block",
+      "pattern": "ufw.*block",
+      "label": "🛡️ Firewall Denied Incoming Request"
+    },
+    {
+      "type": "root_login",
+      "pattern": "root.*login",
+      "label": "⚠️ Root Login Attempt Detected"
+    }
+  ]
+  

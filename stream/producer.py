@@ -10,17 +10,22 @@ logs = [
     "Failed password for root from 8.8.8.8 port 2345 ssh2"
 ]
 
-producer = KafkaProducer(
-    bootstrap_servers='localhost:9092',
-    value_serializer=lambda x: x.encode('utf-8')
-)
+try:
+    producer = KafkaProducer(
+        bootstrap_servers='host.docker.internal:9092',
+        value_serializer=lambda x: x.encode('utf-8')
+    )
+    print("[*] Sending test logs to Kafka topic 'logs'...")
 
-print("[*] Sending test logs to Kafka topic 'logs'...")
+    for _ in range(10):
+        log = random.choice(logs)
+        future = producer.send('logs', value=log)
+        result = future.get(timeout=10)
+        print(f"[+] Sent: {log} | Offset: {result.offset}")
+        time.sleep(0.5)
 
-for _ in range(10):
-    log = random.choice(logs)
-    producer.send('logs', value=log)
-    print(f"[+] Sent: {log}")
-    time.sleep(1)
+    producer.flush()
+    print("[✓] All logs sent successfully.")
 
-producer.flush()
+except Exception as e:
+    print(f"[!] Producer Error: {e}")

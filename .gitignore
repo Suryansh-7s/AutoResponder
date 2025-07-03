@@ -1,13 +1,19 @@
-# Ignore virtual environment
-venv/
-
-# Ignore Python cache
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.sqlite3
+*.db
 
-# Ignore VS Code settings
+# Environments
+env/
+venv/
+.env
+
+# VSCode or IDE
 .vscode/
+.idea/
 
-# Optional: Ignore log files or temp files
+# Logs & other junk
+logs/
 *.log
-*.tmp
+.DS_Store
