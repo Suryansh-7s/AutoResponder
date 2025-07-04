@@ -5,6 +5,8 @@
 [![Kafka](https://img.shields.io/badge/Kafka-2.8+-black?logo=apachekafka)](https://kafka.apache.org/)
 [![Docker](https://img.shields.io/badge/Dockerized-yes-blue?logo=docker)](https://www.docker.com/)
 [![Telegram Bot](https://img.shields.io/badge/Alerts-Telegram-blue?logo=telegram)](https://core.telegram.org/bots/api)
+[![Download Release](https://img.shields.io/github/v/release/Suryansh-7s/AutoResponder?style=for-the-badge)](https://github.com/Suryansh-7s/AutoResponder/releases)
+
 
 > A modular, real-time log monitoring system that detects suspicious activity, enriches IPs using AbuseIPDB, and sends instant Telegram alerts — all powered by Kafka, Filebeat, Redis, and Python.
 
