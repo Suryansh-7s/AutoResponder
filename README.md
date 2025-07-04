@@ -34,7 +34,7 @@ It consumes logs (via Kafka + Filebeat), parses them using configurable detectio
 - **Python**, **Kafka**, **Redis**
 - **Filebeat** for log shipping
 - **Telegram Bot API** for real-time alerting
-- **dotenv**, **httpx**, **kafka-python**, **redis-py**
+- **dotenv**, **kafka-python**, **redis-py**
 
 ---
 
@@ -124,7 +124,7 @@ AutoResponder/
 ├── alert/
 │   └── telegram_alert.py
 ├── config/
-│   └── (optional config files)
+│   └── .env.example
 ├── redis_cache/
 │   ├── ip_enricher.py
 │   ├── redis_client.py
@@ -144,11 +144,6 @@ AutoResponder/
 ---
 
 ## 🖼️ Screenshots (Coming Soon)
-
-- Telegram alert preview  
-- Kafka consumer terminal view  
-- Architecture diagram (Markdown or PNG)  
-- Optional: AbuseIPDB IP enrichment sample
 
 ---
 
@@ -174,3 +169,4 @@ Open issues or suggestions for more log types, rules, or enrichers are highly ap
 **Suryansh Sharma**  
 🚀 [GitHub](https://github.com/Suryansh-7s)  
 💼 [LinkedIn](https://www.linkedin.com/in/suryansh-sharmaseven/)
+🔮 [Portfolio](https://suryansh-sharma-portfolio.vercel.app/)
