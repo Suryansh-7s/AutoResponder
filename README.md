@@ -145,20 +145,6 @@ AutoResponder/
 
 ---
 
-## 🖼️ Screenshots (Coming Soon)
-
----
-
-## 📈 Future Enhancements
-
-- [ ] Add SQLite/PostgreSQL for persistent alert storage
-- [ ] Kibana Dashboard Integration (ELK Stack)
-- [ ] Add API Server to manage alerts/rules (from MINI SIEM)
-- [ ] Self-healing logic (TTL unban via Redis)
-- [ ] Dockerize entire stack fully
-
----
-
 ## 🤝 Contributing
 
 PRs are welcome!  
