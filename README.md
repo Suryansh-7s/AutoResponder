@@ -1,5 +1,11 @@
 # 🛡️ AutoResponder — Real-Time SIEM for SSH Threat Detection
 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
+[![Redis](https://img.shields.io/badge/Redis-7.0+-red?logo=redis)](https://hub.docker.com/_/redis)
+[![Kafka](https://img.shields.io/badge/Kafka-2.8+-black?logo=apachekafka)](https://kafka.apache.org/)
+[![Docker](https://img.shields.io/badge/Dockerized-yes-blue?logo=docker)](https://www.docker.com/)
+[![Telegram Bot](https://img.shields.io/badge/Alerts-Telegram-blue?logo=telegram)](https://core.telegram.org/bots/api)
+
 > A modular, real-time log monitoring system that detects suspicious activity, enriches IPs using AbuseIPDB, and sends instant Telegram alerts — all powered by Kafka, Filebeat, Redis, and Python.
 
 ---
@@ -16,33 +22,34 @@ It consumes logs (via Kafka + Filebeat), parses them using configurable detectio
 
 ```
 [Filebeat] --> [Kafka] --> [Python Consumer]
-                               |--> Rule Matching (Regex)
-                               |--> IP Enrichment (AbuseIPDB via Redis Cache)
-                               |--> Telegram Alerting
+                             |--> Rule Matching (Regex)
+                             |--> IP Enrichment (AbuseIPDB via Redis Cache)
+                             |--> Telegram Alerting
 ```
 
 ---
 
 ## ⚙️ Tech Stack
 
-- **Python** + **Kafka** + **Redis**
+- **Python**, **Kafka**, **Redis**
 - **Filebeat** for log shipping
 - **Telegram Bot API** for real-time alerting
-- **dotenv**, **httpx**, **kafka-python**, and more
+- **dotenv**, **httpx**, **kafka-python**, **redis-py**
 
 ---
 
 ## 🔍 Features
 
 ✅ SSH Brute Force & Invalid Access Detection  
-✅ AbuseIPDB integration for IP intelligence  
-✅ Telegram Alerts for high-fidelity threat response  
-✅ Redis Caching for enriched IPs (performance boost)  
-✅ Modular rule engine via `rules.json`  
-✅ Easy log ingestion using Filebeat & Kafka  
-✅ Environment-based secret handling (`.env`)  
+✅ AbuseIPDB Integration for IP Intelligence  
+✅ Telegram Alerts for Real-Time Threat Response  
+✅ Redis Caching for Enriched IPs (Performance Boost)  
+✅ Modular Rule Engine via `rules.json`  
+✅ Easy Log Ingestion using Filebeat + Kafka  
+✅ Secret Management via `.env`  
 
 ---
+
 ## 🛠️ Local Setup
 
 ### 1. Clone the Repo
@@ -52,11 +59,12 @@ git clone https://github.com/Suryansh-7s/AutoResponder.git
 cd AutoResponder
 ```
 
-### 2. Setup Python Environment
+### 2. Install Python & Setup Virtual Environment
 
 ```bash
 python -m venv venv
-./venv/bin/Activate.ps1
+.\venv\Scripts\Activate.ps1    # For Windows
+# source venv/bin/activate     # For Linux/macOS
 pip install -r requirements.txt
 ```
 
@@ -71,32 +79,41 @@ KAFKA_BOOTSTRAP_SERVERS=localhost:9092
 
 ---
 
-## 🔄 Start the Pipeline
+## ⚡ One-Click Setup (Recommended)
 
-### In WSL/Ubuntu (for Filebeat logs)
+```ps1
+.\setup.ps1   # Runs everything: Docker, Filebeat, VirtualEnv, and launches consumer
+```
+
+> 💡 This script checks for Docker, WSL (Ubuntu), Filebeat setup, and runs the pipeline end-to-end.
+
+---
+
+## 🔄 Manual Pipeline Start
+
+### In WSL/Ubuntu
 
 ```bash
 sudo systemctl start filebeat
 sudo systemctl status filebeat
 ```
 
-### In Python (Windows or WSL)
+### In Windows Terminal / PowerShell
 
 ```bash
+docker-compose up -d
 python -m stream.consumer
 ```
 
 ---
 
-## 🧪 Simulate Attacks
-
-Use this to simulate SSH brute-force attempts:
+## 🧪 Simulate SSH Attacks
 
 ```bash
 for i in {1..6}; do ssh invaliduser@localhost; done
 ```
 
-Check `/var/log/auth.log` to confirm entries are generated.
+> Check `/var/log/auth.log` to confirm brute-force attempts are logged.
 
 ---
 
@@ -104,26 +121,56 @@ Check `/var/log/auth.log` to confirm entries are generated.
 
 ```
 AutoResponder/
-├── alert/                
+├── alert/
+│   └── telegram_alert.py
+├── config/
+│   └── (optional config files)
 ├── redis_cache/
+│   ├── ip_enricher.py
+│   ├── redis_client.py
+├── rules/
+│   └── rules.json
 ├── stream/
-├── .env (To be created by the user)
-├── rules.json
+│   ├── consumer.py
+│   └── producer.py
+├── .env               # To be created by user
+├── docker-compose.yml
+├── LICENSE.txt
+├── README.md
 ├── requirements.txt
-└── README.md
+└── setup.ps1
 ```
+
+---
+
+## 🖼️ Screenshots (Coming Soon)
+
+- Telegram alert preview  
+- Kafka consumer terminal view  
+- Architecture diagram (Markdown or PNG)  
+- Optional: AbuseIPDB IP enrichment sample
 
 ---
 
 ## 📈 Future Enhancements
 
-- [ ] Add SQLite/PostgreSQL-based alert storage
-- [ ] Integrate Kibana for dashboarding
-- [ ] Dockerize entire pipeline
-- [ ] Add a plugin system for threat enrichers
+- [ ] Add SQLite/PostgreSQL for persistent alert storage
+- [ ] Kibana Dashboard Integration (ELK Stack)
+- [ ] Add API Server to manage alerts/rules (from MINI SIEM)
+- [ ] Self-healing logic (TTL unban via Redis)
+- [ ] Dockerize entire stack fully
 
 ---
 
 ## 🤝 Contributing
 
-Feel free to fork, raise PRs, or suggest new log types to monitor!
+PRs are welcome!  
+Open issues or suggestions for more log types, rules, or enrichers are highly appreciated.
+
+---
+
+## 👨‍💻 Author
+
+**Suryansh Sharma**  
+🚀 [GitHub](https://github.com/Suryansh-7s)  
+💼 [LinkedIn](https://www.linkedin.com/in/suryansh-sharmaseven/)
