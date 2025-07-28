@@ -176,4 +176,3 @@ Open issues or suggestions for more log types, rules, or enrichers are highly ap
 =======
 💼 [LinkedIn](https://www.linkedin.com/in/suryansh-sharmaseven/)  
 🔮 [Portfolio](https://suryansh-sharma-portfolio.vercel.app/)
->>>>>>> cdc13dd31fdc110c60624c978b265e580c470530
