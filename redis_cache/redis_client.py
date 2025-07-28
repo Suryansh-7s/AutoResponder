@@ -23,3 +23,15 @@ def get_cached_ip(ip_address):
     if result:
         return json.loads(result)
     return None
+
+def incr_failed_attempt(ip_address, threshold=3600):
+    """Increment failed attempt count for an IP. Returns the new count."""
+    key = f"failcount:{ip_address}"
+    count = r.incr(key)
+    r.expire(key, threshold)
+    return count
+
+def reset_failed_attempts(ip_address):
+    """Reset failed attempt count for an IP."""
+    key = f"failcount:{ip_address}"
+    r.delete(key)

@@ -5,6 +5,7 @@
 [![Kafka](https://img.shields.io/badge/Kafka-2.8+-black?logo=apachekafka)](https://kafka.apache.org/)
 [![Docker](https://img.shields.io/badge/Dockerized-yes-blue?logo=docker)](https://www.docker.com/)
 [![Telegram Bot](https://img.shields.io/badge/Alerts-Telegram-blue?logo=telegram)](https://core.telegram.org/bots/api)
+[![Download Release](https://img.shields.io/github/v/release/Suryansh-7s/AutoResponder?style=for-the-badge)](https://github.com/Suryansh-7s/AutoResponder/releases)
 
 > A modular, real-time log monitoring system that detects suspicious activity, enriches IPs using AbuseIPDB, and sends instant Telegram alerts — all powered by Kafka, Filebeat, Redis, and Python.
 
@@ -34,7 +35,7 @@ It consumes logs (via Kafka + Filebeat), parses them using configurable detectio
 - **Python**, **Kafka**, **Redis**
 - **Filebeat** for log shipping
 - **Telegram Bot API** for real-time alerting
-- **dotenv**, **httpx**, **kafka-python**, **redis-py**
+- **dotenv**, **kafka-python**, **redis-py**
 
 ---
 
@@ -124,7 +125,7 @@ AutoResponder/
 ├── alert/
 │   └── telegram_alert.py
 ├── config/
-│   └── (optional config files)
+│   └── .env.example
 ├── redis_cache/
 │   ├── ip_enricher.py
 │   ├── redis_client.py
@@ -144,11 +145,6 @@ AutoResponder/
 ---
 
 ## 🖼️ Screenshots (Coming Soon)
-
-- Telegram alert preview  
-- Kafka consumer terminal view  
-- Architecture diagram (Markdown or PNG)  
-- Optional: AbuseIPDB IP enrichment sample
 
 ---
 
@@ -173,4 +169,5 @@ Open issues or suggestions for more log types, rules, or enrichers are highly ap
 
 **Suryansh Sharma**  
 🚀 [GitHub](https://github.com/Suryansh-7s)  
-💼 [LinkedIn](https://www.linkedin.com/in/suryansh-sharmaseven/)
+💼 [LinkedIn](https://www.linkedin.com/in/suryansh-sharmaseven/)    
+🔮 [Portfolio](https://suryansh-sharma-portfolio.vercel.app/)
