@@ -159,7 +159,6 @@ AutoResponder/
 
 ---
 
-=======
 ## 🤝 Contributing
 
 PRs are welcome!  
@@ -173,6 +172,5 @@ Open issues or suggestions for more log types, rules, or enrichers are highly ap
 🚀 [GitHub](https://github.com/Suryansh-7s)
 💼 [LinkedIn](https://www.linkedin.com/in/suryansh-sharmaseven/)    
 🔮 [Portfolio](https://suryansh-sharma-portfolio.vercel.app/)
-=======
 💼 [LinkedIn](https://www.linkedin.com/in/suryansh-sharmaseven/)  
 🔮 [Portfolio](https://suryansh-sharma-portfolio.vercel.app/)
