@@ -6,6 +6,10 @@
 [![Docker](https://img.shields.io/badge/Dockerized-yes-blue?logo=docker)](https://www.docker.com/)
 [![Telegram Bot](https://img.shields.io/badge/Alerts-Telegram-blue?logo=telegram)](https://core.telegram.org/bots/api)
 [![Download Release](https://img.shields.io/github/v/release/Suryansh-7s/AutoResponder?style=for-the-badge)](https://github.com/Suryansh-7s/AutoResponder/releases)
+<<<<<<< HEAD
+=======
+
+>>>>>>> cdc13dd31fdc110c60624c978b265e580c470530
 
 > A modular, real-time log monitoring system that detects suspicious activity, enriches IPs using AbuseIPDB, and sends instant Telegram alerts — all powered by Kafka, Filebeat, Redis, and Python.
 
@@ -144,6 +148,7 @@ AutoResponder/
 
 ---
 
+<<<<<<< HEAD
 ## 🖼️ Screenshots (Coming Soon)
 
 ---
@@ -158,6 +163,8 @@ AutoResponder/
 
 ---
 
+=======
+>>>>>>> cdc13dd31fdc110c60624c978b265e580c470530
 ## 🤝 Contributing
 
 PRs are welcome!  
@@ -169,5 +176,10 @@ Open issues or suggestions for more log types, rules, or enrichers are highly ap
 
 **Suryansh Sharma**  
 🚀 [GitHub](https://github.com/Suryansh-7s)  
+<<<<<<< HEAD
 💼 [LinkedIn](https://www.linkedin.com/in/suryansh-sharmaseven/)    
 🔮 [Portfolio](https://suryansh-sharma-portfolio.vercel.app/)
+=======
+💼 [LinkedIn](https://www.linkedin.com/in/suryansh-sharmaseven/)  
+🔮 [Portfolio](https://suryansh-sharma-portfolio.vercel.app/)
+>>>>>>> cdc13dd31fdc110c60624c978b265e580c470530
